@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  test-game:
+    image: keihatsu/nodejschatapp:latest
+    build: .
+    container_name: something_larry
+    ports:
+      - "80:1000"
+    environment:
+      - PORT=1000
+    volumes:
+      - ./:/app
+    command: ["node", "app.js"]
