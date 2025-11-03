@@ -1,6 +1,7 @@
 var express = require("express");
 var app = express();
-var port = process.env.PORT || 3700;
+// Change port
+var port = process.env.PORT || 1000;
 
 // Set view of '/' end point
 app.set('views', __dirname + '/views');

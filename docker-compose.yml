@@ -11,4 +11,5 @@ services:
       - PORT=1000
     volumes:
       - ./:/app
-    command: ["node", "app.js"]
+      # verify that file has app.js or index.js
+    command: ["node", "index.js"]
