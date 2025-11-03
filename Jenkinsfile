@@ -42,6 +42,13 @@ pipeline {
                 }
             }
         }
+        stage('DAST')
+        {
+            steps
+            {
+                sh 'echo Running DAST scan...'
+            }
+        }
         stage('DEPLOYMENT')
         {
             agent { label 'hello-world-soto' }
