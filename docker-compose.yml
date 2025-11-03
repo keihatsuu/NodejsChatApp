@@ -6,6 +6,7 @@ services:
     container_name: something_larry
     ports:
       - "80:1000"
+    # change port for new builds
     environment:
       - PORT=1000
     volumes:
