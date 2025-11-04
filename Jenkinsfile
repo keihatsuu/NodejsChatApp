@@ -73,5 +73,3 @@ pipeline {
                 echo 'Deployment completed succcessfully'
             }
         }
-    }
-}
