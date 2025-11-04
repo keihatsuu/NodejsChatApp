@@ -16,9 +16,6 @@ pipeline {
                 checkout scm
             }
         }
-                sh 'echo Running SAST scan wtih snyk...'
-            }    
-        }
         stage('BUILD-AND-TAG')
         {
             agent { 
@@ -73,3 +70,5 @@ pipeline {
                 echo 'Deployment completed succcessfully'
             }
         }
+    }
+}
