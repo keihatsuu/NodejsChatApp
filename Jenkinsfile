@@ -30,6 +30,21 @@ pipeline {
                 }
             }
         }
+        stage('SonarQube Analysis') {
+            agent {
+                label 'hello-world-soto'
+            }
+            steps {
+                script {
+                    def scannerHome = tool 'SonarQube-Scanner'
+                    withSonarQubeEnv('SonarQube-Installations') {
+                        sh "${scannerHome}/bin/sonar-scanner \
+                            -Dsonar.projectKey=gameapp \
+                            -Dsonar.sources=."
+                    }
+                }
+            }
+        }
         stage('POST-TO-DOCKERHUB')
         {
             agent { label 'hello-world-soto' }
