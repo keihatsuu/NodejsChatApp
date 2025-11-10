@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent 'hello-world-soto'
     environment
     {
         //Change here
